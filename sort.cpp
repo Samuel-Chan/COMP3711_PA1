@@ -1,7 +1,10 @@
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
 using namespace std;
 
-void printArray(int arr[], int n){
+void printArray(long arr[], long n){
 
 //	cout << arr[0] << "The first statement" << "\n" ;
   for(int i=0; i<n; i++){
@@ -11,14 +14,14 @@ void printArray(int arr[], int n){
 }
 
 
-void bubbleSort(int arr[], int n) {
+void bubbleSort(long arr[], long n) {
       bool swapped = true;
-      int j = 0;
-      int tmp;
+      long j = 0;
+      long tmp;
       while (swapped) {
             swapped = false;
             j++;
-            for (int i = 0; i < n - j; i++) {
+            for (long i = 0; i < n - j; i++) {
                   if (arr[i] > arr[i + 1]) {
                         tmp = arr[i];
                         arr[i] = arr[i + 1];
@@ -29,9 +32,9 @@ void bubbleSort(int arr[], int n) {
       }
 }
 
-void insertionSort(int arr[], int n) {
-	int key, i;
-	for (int j=1; j<n; j++)
+void insertionSort(long arr[], long n) {
+	long key, i;
+	for (long j=1; j<n; j++)
 	{
 		key = arr[j];
 		i = j-1;
@@ -44,10 +47,10 @@ void insertionSort(int arr[], int n) {
 	}
 }
 
-void quickSort(int arr[], int left, int right) {
-      int i = left, j = right;
-      int tmp;
-      int pivot = arr[(left + right) / 2];
+void quickSort(long arr[], long left, long right) {
+      long i = left, j = right;
+      long tmp;
+      long pivot = arr[(left + right) / 2];
 
       /* partition */
       while (i <= j) {
@@ -70,3 +73,18 @@ void quickSort(int arr[], int left, int right) {
       if (i < right)
             quickSort(arr, i, right);
 }
+
+
+/* Generate an array of random numbers from 0 to max */
+void generateRandomArr(long num_to_gen, long max, long arr[])
+{
+    srand(time(NULL));
+
+    long random_num;
+
+    for (long i=0; i<num_to_gen; i++){
+        random_num = rand() % max;
+        arr[i] = random_num;
+    }
+
+}    
