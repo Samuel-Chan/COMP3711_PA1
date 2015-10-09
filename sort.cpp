@@ -31,7 +31,7 @@ void bubbleSort(int arr[], int n) {
 
 void insertionSort(int arr[], int n) {
 	int key, i;
-	for (int j=1; j<=n; j++)
+	for (int j=1; j<n; j++)
 	{
 		key = arr[j];
 		i = j-1;

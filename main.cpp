@@ -7,8 +7,17 @@ int main () {
 	int testArr3[] = {5, 4, 3, 2, 1};
 	int testArr4[] = {7, 2, 5, 1, 3};
 
+
 	printArray(testArr2, 5);
     insertionSort(testArr2, 5);
 	printArray(testArr2, 5);
+    
+    printArray(testArr3, 5);
+    insertionSort(testArr3, 5);
+	printArray(testArr3, 5);
+    
+    printArray(testArr4, 5);
+    insertionSort(testArr4, 5);
+	printArray(testArr4, 5);
     
 }
