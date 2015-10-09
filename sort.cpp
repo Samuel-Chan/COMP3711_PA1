@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int arr[], n){
+void printArray(int arr[], int n){
 
 //	cout << arr[0] << "The first statement" << "\n" ;
-      for(int i=0; i<n; i++){
+  for(int i=0; i<n; i++){
 		cout << arr[i] << '\t';
-	}
-	cout << "\n";
+  }
+    cout << "\n";
 }
 
 
@@ -31,11 +31,11 @@ void bubbleSort(int arr[], int n) {
 
 void insertionSort(int arr[], int n) {
 	int key, i;
-	for (int j=2; j<=n; j++)
+	for (int j=1; j<=n; j++)
 	{
 		key = arr[j];
 		i = j-1;
-		while (i>=1 && arr[i]>key)
+		while (i>=0 && arr[i]>key)
 		{
 			arr[i+1] = arr[i];
 			--i;
