@@ -1,0 +1,4 @@
+all: sort.c
+	g++ -o sort main.	dfdsf
+main.o: main.cpp
+	g++ -o main main.o

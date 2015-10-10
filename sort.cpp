@@ -52,7 +52,6 @@ void quickSort(long arr[], long left, long right) {
       long tmp;
       long pivot = arr[(left + right) / 2];
 
-      /* partition */
       while (i <= j) {
             while (arr[i] < pivot)
                   i++;
@@ -67,7 +66,6 @@ void quickSort(long arr[], long left, long right) {
             }
       };
 
-      /* recursion */
       if (left < j)
             quickSort(arr, left, j);
       if (i < right)
@@ -88,3 +86,12 @@ void generateRandomArr(long num_to_gen, long max, long arr[])
     }
 
 }    
+
+/* Gnerate an already sorted array */
+void generateSortedArr(long num_to_gen, long max, long arr[])
+{
+    for (long i=0; i<num_to_gen; i++)
+    {
+        arr[i] = i;
+    }
+}
